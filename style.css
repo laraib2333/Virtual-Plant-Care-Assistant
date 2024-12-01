@@ -1,0 +1,586 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Emilys+Candy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(209, 226, 209, 0.897);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: rgba(30, 47, 3, 0.98) ;
+}
+
+.background {
+    background-image: url('./img/bg.jpg');
+    background-color: rgba(76, 80, 80, 0.33);
+    filter: blur(2px);
+    -webkit-filter: blur(3px);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    position: relative; 
+}
+.container {
+    position: absolute;
+    top: 25%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    width: 80%; 
+    background-color: rgba(30, 47, 3, 0.498);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 5px rgba(30, 47, 3, 0.498);
+}
+h1 {
+    font-family: "Emilys Candy", serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: aliceblue;
+}
+h3 {
+    color: white; 
+    font-size: 1.2rem; 
+}
+
+/* Secrion 1&2 Start */
+.conatiner-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.625rem; 
+}
+h2{
+ text-align: center;
+ background-color: rgba(30, 47, 3, 0.617);
+ backdrop-filter: blur(5px);
+ margin: 10px auto;
+ font-family: "Emilys Candy", serif;
+ font-size: 2rem;
+ font-weight: 400;
+ color: aliceblue;
+}
+#plant-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.form-control{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    width: 40vw;
+    border-radius: 20px 12px 20px;
+    box-shadow: inset 2px 2px 2px rgba(30, 47, 3, 0.98) , 2px 2px 2px rgba(30, 47, 3, 0.98);
+}
+.btn-dis{
+    display: inline;
+}
+.plant{
+    padding: .5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 9px;
+    width: 20vw;
+    color: aliceblue;
+    background-color:rgb(30, 47, 3) ;
+    border: 2px solid rgb(30, 47, 3);
+}
+#growthCanvas {
+    border: 5px double rgb(30, 47, 3);
+    background-color:aliceblue ;
+    box-shadow: inset 2px 2px 2px rgba(30, 47, 3, 0.98) , 2px 2px 2px rgba(30, 47, 3, 0.98);
+    margin-top: 3rem ;
+    margin-left: 8rem;
+    border-radius: 15px;
+    width: 30vw;
+    transition: transform 0.2s ease ease-in-out;
+}
+#growthCanvas:hover {
+    box-shadow: inset 2px 2px 2px rgba(30, 47, 3, 0.98) , 6px 6px 8px  rgba(30, 47, 3, 0.98);
+    transform: scale(1.05);
+}
+/* Secrion 1&2 End */
+
+/* Secrion 3 Start*/
+.diag-btn{
+    display: block; 
+    margin: 20px auto; 
+    padding: .5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 20px;
+    width: 20vw;
+    color: aliceblue;
+    background-color:rgb(30, 47, 3) ;
+    border: 2px solid rgb(30, 47, 3);
+}
+#diagnostic-questions{
+    line-height: 50px;
+    text-align: center;
+}
+p{
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+    color: rgba(30, 47, 3, 0.98) ;
+    text-decoration: underline;
+    text-decoration-style:dashed;
+}
+.form-label{
+    text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+    font-size: 1.3rem;
+    font-weight: 800;
+
+}
+.form-select{
+    display: block; 
+    margin: 20px auto; 
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    width: 40vw;
+    border-radius: 20px 12px 20px;
+    box-shadow: inset 2px 2px 2px rgba(30, 47, 3, 0.98) , 2px 2px 2px rgba(30, 47, 3, 0.98);
+
+}
+
+#diagnostic-result{
+    display: block; 
+    margin: 20px auto; 
+    width: 40vw;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    background-color: azure;
+    border-radius: 20px 12px 20px;
+    box-shadow: inset 2px 2px 2px rgba(30, 47, 3, 0.98) , 2px 2px 2px rgba(30, 47, 3, 0.98);
+}
+/* Secrion 3 End*/
+
+/* Footer  */
+.footer{
+    color: aliceblue;
+    text-align: center;
+    background-color: rgba(30, 47, 3, 0.617);
+    backdrop-filter: blur(5px);
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.877);
+   padding: 20px;
+}
+/* Footer  */
+
+
+/* Media queries  */
+@media(max-width:320px){
+    .background {
+        width: 100vw;
+        height: 45vh;
+        position: relative; 
+    }
+    .container {
+        position: absolute;
+        top: 10%;
+        right:  10%; 
+        transform: translateX(-50%); 
+        text-align: center;
+       
+    }
+    h1 {
+        font-family: "Emilys Candy", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: aliceblue;
+    }
+    h3 {
+        color: white; 
+        font-size: .77rem; 
+    }
+    .conatiner-2{
+     display: block;
+    }
+    h2{
+     font-size: 1.3rem;
+     font-weight: 300;
+    }
+    #growthCanvas {
+     display: block;
+     margin: 20px auto;
+     width: 80vw;
+    }
+
+    #plant-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-label{
+        text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+        font-size: 1rem;
+        font-weight: 800;
+    
+    }
+    .form-control{
+        margin: 5px auto;
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: center;
+        width: 50vw;
+    }
+    .btn-dis{
+        display: block;
+
+    }
+    .plant{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 30vw;
+    }
+    .diag-btn{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 50vw;
+    }
+    p{
+        font-size: 1rem;
+    }
+    #diagnostic-questions{
+line-height: 30px;
+    }
+    .form-select{
+        display: block; 
+        margin: 20px auto; 
+        font-size: 1rem;
+        font-weight: 400;       
+        width: 40vw;
+    }
+    #diagnostic-result{
+        display: block; 
+        margin: 20px auto; 
+        width: 60vw;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .footer{
+        font-size: .88rem;
+        font-weight: 200;
+       padding: 20px;
+    }
+}
+
+@media(max-width:375px){
+    .background {
+        width: 100vw;
+        height: 45vh;
+        position: relative; 
+    }
+    .container {
+        position: absolute;
+        top: 10%;
+        right:  10%; 
+        transform: translateX(-50%); 
+        text-align: center;
+       
+    }
+    h1 {
+        font-family: "Emilys Candy", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: aliceblue;
+    }
+    h3 {
+        color: white; 
+        font-size: .77rem; 
+    }
+    .conatiner-2{
+     display: block;
+    }
+    h2{
+     font-size: 1.3rem;
+     font-weight: 300;
+    }
+    #growthCanvas {
+     display: block;
+     margin: 20px auto;
+     width: 80vw;
+    }
+
+    #plant-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-label{
+        text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+        font-size: 1rem;
+        font-weight: 800;
+    
+    }
+    .form-control{
+        margin: 5px auto;
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: center;
+        width: 50vw;
+    }
+    .btn-dis{
+        display: block;
+
+    }
+    .plant{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 30vw;
+    }
+    .diag-btn{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 50vw;
+    }
+    p{
+        font-size: 1rem;
+    }
+    #diagnostic-questions{
+line-height: 30px;
+    }
+    .form-select{
+        display: block; 
+        margin: 20px auto; 
+        font-size: 1rem;
+        font-weight: 400;       
+        width: 40vw;
+    }
+    #diagnostic-result{
+        display: block; 
+        margin: 20px auto; 
+        width: 60vw;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .footer{
+        font-size: .88rem;
+        font-weight: 200;
+       padding: 20px;
+    }
+}
+
+@media(max-width:425px){
+    .background {
+        width: 100vw;
+        height: 45vh;
+        position: relative; 
+    }
+    .container {
+        position: absolute;
+        top: 10%;
+        right:  10%; 
+        transform: translateX(-50%); 
+        text-align: center;
+       
+    }
+    h1 {
+        font-family: "Emilys Candy", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: aliceblue;
+    }
+    h3 {
+        color: white; 
+        font-size: .77rem; 
+    }
+    .conatiner-2{
+     display: block;
+    }
+    h2{
+     font-size: 1.3rem;
+     font-weight: 300;
+    }
+    #growthCanvas {
+     display: block;
+     margin: 20px auto;
+     width: 80vw;
+    }
+
+    #plant-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-label{
+        text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+        font-size: 1rem;
+        font-weight: 800;
+    
+    }
+    .form-control{
+        margin: 5px auto;
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: center;
+        width: 50vw;
+    }
+    .btn-dis{
+        display: block;
+
+    }
+    .plant{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 30vw;
+    }
+    .diag-btn{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 50vw;
+    }
+    p{
+        font-size: 1rem;
+    }
+    #diagnostic-questions{
+line-height: 30px;
+    }
+    .form-select{
+        display: block; 
+        margin: 20px auto; 
+        font-size: 1rem;
+        font-weight: 400;       
+        width: 40vw;
+    }
+    #diagnostic-result{
+        display: block; 
+        margin: 20px auto; 
+        width: 80vw;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .footer{
+        font-size: .88rem;
+        font-weight: 200;
+       padding: 20px;
+    }
+}
+
+
+@media(max-width:768px){
+    .background {
+        width: 100vw;
+        height: 45vh;
+        position: relative; 
+    }
+    .container {
+        position: absolute;
+        top: 10%;
+        right:  10%; 
+        transform: translateX(-50%); 
+        text-align: center;
+       
+    }
+    h1 {
+        font-family: "Emilys Candy", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: aliceblue;
+    }
+    h3 {
+        color: white; 
+        font-size: .77rem; 
+    }
+    .conatiner-2{
+     display: block;
+    }
+    h2{
+     font-size: 1.3rem;
+     font-weight: 300;
+    }
+    #growthCanvas {
+     display: block;
+     margin: 20px auto;
+     width: 70vw;
+    }
+
+    #plant-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-label{
+        text-shadow: 2px 2px 2px rgba(24, 36, 5, 0.55);
+        font-size: 1.3rem;
+        font-weight: 800;
+    
+    }
+    .form-control{
+        margin: 5px auto;
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: center;
+        width: 50vw;
+    }
+    .btn-dis{
+        display: block;
+
+    }
+    .plant{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 30vw;
+    }
+    .diag-btn{
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 50vw;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    #diagnostic-questions{
+line-height: 30px;
+    }
+    .form-select{
+        display: block; 
+        margin: 20px auto; 
+        font-size: 1rem;
+        font-weight: 400;       
+        width: 40vw;
+    }
+    #diagnostic-result{
+        display: block; 
+        margin: 20px auto; 
+        width: 80vw;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .footer{
+        font-size: 1rem;
+        font-weight: 200;
+       padding: 20px;
+    }
+}
